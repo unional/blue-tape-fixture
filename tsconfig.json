@@ -6,11 +6,8 @@
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": ".",
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
     "module": "commonjs",
     "moduleResolution": "node",
-    "noImplicitAny": true,
     "newLine": "LF",
     "paths": {
       "blue-tape-fixture": [
