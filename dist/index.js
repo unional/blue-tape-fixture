@@ -1,10 +1,14 @@
 "use strict";
 var test = require('blue-tape');
 var path_1 = require('path');
-function fixture(path) {
+/**
+ * Create fixture test with the specified fixture base path.
+ * @param fixtureBasePath Fixture base path. If using relative path, starts at the project root.
+ */
+function fixture(fixtureBasePath) {
     function curry(testfn) {
         return function (title, fixtureName, cb) {
-            var fixturePath = path_1.join(path, fixtureName);
+            var fixturePath = path_1.join(fixtureBasePath, fixtureName);
             return testfn(title + " (fixture: " + fixtureName + ")", function (t) {
                 return cb(t, fixturePath);
             });

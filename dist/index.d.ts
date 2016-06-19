@@ -4,4 +4,8 @@ export interface FixtureTest {
     only(name: string, fixtureName: string, cb: (t: test.Test, path: string) => any): test.Test;
     skip(name: string, fixtureName: string, cb: (t: test.Test, path: string) => any): test.Test;
 }
-export default function fixture(path: string): FixtureTest;
+/**
+ * Create fixture test with the specified fixture base path.
+ * @param fixtureBasePath Fixture base path. If using relative path, starts at the project root.
+ */
+export default function fixture(fixtureBasePath: string): FixtureTest;
