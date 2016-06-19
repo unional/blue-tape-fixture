@@ -1,4 +1,4 @@
-import fixture from '../src/index';
+import fixture from 'blue-tape-fixture';
 
 const test = fixture('fixtures');
 
