@@ -1,0 +1,49 @@
+{
+  "name": "blue-tape-fixture",
+  "version": "0.0.0",
+  "description": "Write fixture tests with blue-tape",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist/",
+    "typings.json",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "echo building... && tsc -d -p tsconfig.build.json",
+    "lint": "echo linting... && tslint \"src/**/*.ts\"",
+    "test": "echo testing... && ts-node -P tsconfig.build.json node_modules/blue-tape/bin/blue-tape \"test/**/*.ts\" | tap-spec",
+    "watch": "onchange -w \"**/*.ts\" -i -e \"dist/**\" -- npm -s run lint+test",
+    "verify": "npm run build && npm -s run lint+test",
+    "build+test": "npm run build && npm test",
+    "lint+test": "npm run lint && npm test",
+    "preversion": "npm run verify",
+    "prepublish": "typings install"
+  },
+  "license": "MIT",
+  "keywords": [
+    "blue-tape",
+    "fixture"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/unional/blue-tape-fixture.git"
+  },
+  "bugs": {
+    "url": "https://github.com/unional/blue-tape-fixture/issues"
+  },
+  "homepage": "https://github.com/unional/blue-tape-fixture",
+  "devDependencies": {
+    "blue-tape": "^0.2.0",
+    "onchange": "^2.5.0",
+    "tap-spec": "^4.1.1",
+    "ts-node": "^0.9.1",
+    "tslint": "^3.11.0",
+    "tslint-config-unional": "^0.2.7",
+    "typescript": "^1.9.0-dev.20160619-1.0",
+    "typings": "^1.3.0"
+  },
+  "dependencies": {
+    "blue-tape": "^0.2.0"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "declaration": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "newLine": "LF",
+    "noImplicitAny": true,
+    "paths": {
+      "blue-tape-fixture": [
+        "src/"
+      ]
+    },
+    "removeComments": true,
+    "outDir": "dist",
+    "sourceMap": true,
+    "target": "es5"
+  },
+  "files": [
+    "src/index.ts",
+    "typings/index.d.ts"
+  ]
+}
