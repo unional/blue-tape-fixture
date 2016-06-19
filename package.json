@@ -10,11 +10,11 @@
     "LICENSE"
   ],
   "scripts": {
-    "build": "echo building... && tsc -d -p tsconfig.build.json",
-    "lint": "echo linting... && tslint \"src/**/*.ts\"",
-    "test": "echo testing... && ts-node -P tsconfig.build.json node_modules/blue-tape/bin/blue-tape \"test/**/*.ts\" | tap-spec",
-    "watch": "onchange -w \"**/*.ts\" -i -e \"dist/**\" -- npm -s run lint+test",
-    "verify": "npm run build && npm -s run lint+test",
+    "build": "rimraf dist && tsc -d -p tsconfig.build.json",
+    "lint": "tslint \"src/**/*.ts\"",
+    "test": "ts-node -P tsconfig.build.json node_modules/blue-tape/bin/blue-tape \"test/**/*.ts\" | tap-spec",
+    "watch": "onchange -w \"**/*.ts\" -i -e \"dist/**\" -- npm run lint+test",
+    "verify": "npm run build && npm run lint+test",
     "build+test": "npm run build && npm test",
     "lint+test": "npm run lint && npm test",
     "preversion": "npm run verify && git add dist",
@@ -36,6 +36,7 @@
   "devDependencies": {
     "blue-tape": "^0.2.0",
     "onchange": "^2.5.0",
+    "rimraf": "^2.5.2",
     "tap-spec": "^4.1.1",
     "ts-node": "^0.9.1",
     "tslint": "^3.11.0",
