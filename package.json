@@ -17,7 +17,7 @@
     "verify": "npm run build && npm -s run lint+test",
     "build+test": "npm run build && npm test",
     "lint+test": "npm run lint && npm test",
-    "preversion": "npm run verify",
+    "preversion": "npm run verify && git add dist",
     "prepublish": "typings install"
   },
   "license": "MIT",
