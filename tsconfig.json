@@ -17,6 +17,7 @@
         "src/"
       ]
     },
+    "outDir": "dist",
     "target": "es5"
   },
   "exclude": [
