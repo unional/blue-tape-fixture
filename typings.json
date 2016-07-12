@@ -1,6 +1,5 @@
 {
   "name": "blue-tape-fixture",
-  "main": "dist/index.d.ts",
   "globalDevDependencies": {
     "node": "registry:env/node#6.0.0+20160610031852"
   },
