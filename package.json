@@ -5,8 +5,7 @@
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "files": [
-    "dist/",
-    "LICENSE"
+    "dist/"
   ],
   "scripts": {
     "build": "rimraf dist && tsc -d",
