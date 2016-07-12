@@ -1,5 +1,8 @@
 # blue tape fixture
 
+[![npm version](https://badge.fury.io/js/blue-tape-fixture.svg)](https://badge.fury.io/js/blue-tape-fixture)
+[![Build Status](https://travis-ci.org/unional/blue-tape-fixture.svg?branch=master)](https://travis-ci.org/unional/blue-tape-fixture)
+
 Helps you to easily write fixture tests.
 
 ## What is Fixture Test
