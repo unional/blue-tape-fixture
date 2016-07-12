@@ -8,12 +8,11 @@
     "dist/"
   ],
   "scripts": {
-    "build": "rimraf dist && tsc -d",
+    "build": "rimraf dist && tsc -d -p tsconfig.build.json",
     "lint": "echo linting... && tslint \"src/**/*.ts\"",
-    "test": "echo testing... && ts-node node_modules/blue-tape/bin/blue-tape \"src/**/*.spec.ts\" | tap-spec",
-    "watch": "onchange -w \"**/*.ts\" -i -e \"dist/**\" -- npm -s run test",
+    "test": "ts-node node_modules/blue-tape/bin/blue-tape \"src/**/*.spec.ts\" | tap-spec",
+    "watch": "onchange -w \"**/*.ts\" -i -e \"dist/**\" -- npm run test",
     "verify": "npm run build && npm run lint+test",
-    "build+test": "npm run build && npm test",
     "lint+test": "npm run lint && npm test",
     "preversion": "npm run verify",
     "prepublish": "typings install"
