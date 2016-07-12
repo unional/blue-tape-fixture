@@ -1,6 +1,6 @@
 {
   "name": "blue-tape-fixture",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Write fixture tests with blue-tape",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
