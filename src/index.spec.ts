@@ -1,4 +1,4 @@
-import fixture from '../src/index';
+import fixture from './index';
 
 const test = fixture('fixtures');
 

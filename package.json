@@ -12,7 +12,7 @@
   "scripts": {
     "build": "rimraf dist && tsc -d",
     "lint": "echo linting... && tslint \"src/**/*.ts\"",
-    "test": "echo testing... && ts-node -P tsconfig.build.json node_modules/blue-tape/bin/blue-tape \"test/**/*.ts\" | tap-spec",
+    "test": "echo testing... && ts-node node_modules/blue-tape/bin/blue-tape \"src/**/*.spec.ts\" | tap-spec",
     "watch": "onchange -w \"**/*.ts\" -i -e \"dist/**\" -- npm -s run test",
     "verify": "npm run build && npm -s run lint+test",
     "build+test": "npm run build && npm test",
