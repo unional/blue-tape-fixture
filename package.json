@@ -10,11 +10,10 @@
     "LICENSE"
   ],
   "scripts": {
-    "build": "echo building... && rimraf dist && tsc -d -p tsconfig.build.json",
-    "build-test": "rimraf dist && tsc -d",
+    "build": "rimraf dist && tsc -d",
     "lint": "echo linting... && tslint \"src/**/*.ts\"",
     "test": "echo testing... && ts-node -P tsconfig.build.json node_modules/blue-tape/bin/blue-tape \"test/**/*.ts\" | tap-spec",
-    "watch": "onchange -w \"**/*.ts\" -i -e \"dist/**\" -- npm -s run lint+test",
+    "watch": "onchange -w \"**/*.ts\" -i -e \"dist/**\" -- npm -s run test",
     "verify": "npm run build && npm -s run lint+test",
     "build+test": "npm run build && npm test",
     "lint+test": "npm run lint && npm test",
