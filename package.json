@@ -1,6 +1,6 @@
 {
   "name": "blue-tape-fixture",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Write fixture tests with blue-tape",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -10,14 +10,14 @@
     "LICENSE"
   ],
   "scripts": {
-    "build": "rimraf dist && tsc -d -p tsconfig.build.json",
-    "lint": "tslint \"src/**/*.ts\"",
-    "test": "ts-node -P tsconfig.build.json node_modules/blue-tape/bin/blue-tape \"test/**/*.ts\" | tap-spec",
-    "watch": "onchange -w \"**/*.ts\" -i -e \"dist/**\" -- npm run lint+test",
+    "build": "rimraf dist && tsc -d",
+    "lint": "echo linting... && tslint \"src/**/*.ts\"",
+    "test": "echo testing... && ts-node node_modules/blue-tape/bin/blue-tape \"src/**/*.spec.ts\" | tap-spec",
+    "watch": "onchange -w \"**/*.ts\" -i -e \"dist/**\" -- npm -s run test",
     "verify": "npm run build && npm run lint+test",
     "build+test": "npm run build && npm test",
     "lint+test": "npm run lint && npm test",
-    "preversion": "npm run verify && git add dist",
+    "preversion": "npm run verify",
     "prepublish": "typings install"
   },
   "license": "MIT",

@@ -1,6 +1,6 @@
 import { join } from 'path';
+import fixture from './index';
 import { existsSync } from 'fs';
-import fixture from '../src/index';
 
 const test = fixture('test/fixtures');
 

@@ -21,4 +21,3 @@ function fixture(fixtureBasePath) {
 }
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = fixture;
-//# sourceMappingURL=index.js.map
