@@ -11,7 +11,7 @@ export interface FixtureTest {
  * Create fixture test with the specified fixture base path.
  * @param fixtureBasePath Fixture base path. If using relative path, starts at the project root.
  */
-export default function fixture(fixtureBasePath: string): FixtureTest {
+export default function fixture(tape: typeof test, fixtureBasePath: string): FixtureTest {
   function curry(testfn: (name: string, cb: test.TestCase) => any): any {
     return (
       title: string,
@@ -24,8 +24,8 @@ export default function fixture(fixtureBasePath: string): FixtureTest {
       });
     };
   }
-  let result: any = curry(test);
-  result.only = curry(test.only);
-  result.skip = curry(test.skip);
+  let result: any = curry(tape);
+  result.only = curry(tape.only);
+  result.skip = curry(tape.skip);
   return result as FixtureTest;
 }
