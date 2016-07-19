@@ -1,8 +1,10 @@
 import { join } from 'path';
-import fixture from './index';
 import { existsSync } from 'fs';
+import tape = require('blue-tape');
 
-const test = fixture(join(__dirname, 'fixtures'));
+import fixture from './index';
+
+const test = fixture(tape, join(__dirname, 'fixtures'));
 
 test('abs path', 'case-1', (t, path) => {
   const filePath = join(path, 'somefile.txt');
@@ -10,7 +12,7 @@ test('abs path', 'case-1', (t, path) => {
   t.end();
 });
 
-const rtest = fixture('src/fixtures');
+const rtest = fixture(tape, 'src/fixtures');
 
 rtest('relative path', 'case-1', (t, path) => {
   const filePath = join(path, 'somefile.txt');
