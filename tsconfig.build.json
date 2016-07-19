@@ -10,11 +10,12 @@
     "inlineSources": true,
     "module": "commonjs",
     "moduleResolution": "node",
-    "noImplicitAny": true,
     "newLine": "LF",
+    "noImplicitAny": true,
     "removeComments": true,
     "rootDir": "src",
     "outDir": "dist",
+    "strictNullChecks": true,
     "sourceMap": true,
     "target": "es5"
   },
