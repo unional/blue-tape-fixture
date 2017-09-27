@@ -1,5 +1,7 @@
 # blue tape fixture
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/unional/blue-tape-fixture.svg)](https://greenkeeper.io/)
+
 [![npm version](https://badge.fury.io/js/blue-tape-fixture.svg)](https://badge.fury.io/js/blue-tape-fixture)
 [![Build Status](https://travis-ci.org/unional/blue-tape-fixture.svg?branch=master)](https://travis-ci.org/unional/blue-tape-fixture)
 
