@@ -10,9 +10,9 @@ Helps you to easily write fixture tests.
 ## Important Notice
 
 I have created [`@unional/fixture`](https://github.com/unional/fixture) which will replace this package.
-It is decoupled from `ava` and can be used with any test runner.
+It is decoupled from `blue-tape` and can be used with any test runner.
 
-Feel free to give it a try. If you found any feature in `ava-fixture` is missing in `@unional/fixture`, please open an issue there.
+Feel free to give it a try. If you found any feature in `blue-tape-fixture` is missing in `@unional/fixture`, please open an issue there.
 
 
 ## What is Fixture Test
