@@ -7,6 +7,14 @@
 
 Helps you to easily write fixture tests.
 
+## Important Notice
+
+I have created [`@unional/fixture`](https://github.com/unional/fixture) which will replace this package.
+It is decoupled from `ava` and can be used with any test runner.
+
+Feel free to give it a try. If you found any feature in `ava-fixture` is missing in `@unional/fixture`, please open an issue there.
+
+
 ## What is Fixture Test
 
 Fixture tests are tests that require access to some files. The tests may write files and in that case the files can be compared with a baseline (i.e. Baseline Tests)
